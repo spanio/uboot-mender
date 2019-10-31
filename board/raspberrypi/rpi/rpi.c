@@ -484,3 +484,9 @@ int ft_board_setup(void *blob, bd_t *bd)
 
 	return 0;
 }
+
+int board_early_init_f(void)
+{
+	gd->flags |= (GD_FLG_SILENT | GD_FLG_DISABLE_CONSOLE);
+	return 0;
+}
